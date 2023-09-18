@@ -1,2 +1,2 @@
-# popularCoins
-python script for making a csv file of every coins' 24 hr volume/market cap
+
+python script that uses coingecko's (free) api to make a .csv file of every coins' name/market cap/24 hr volume
