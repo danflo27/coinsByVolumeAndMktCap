@@ -27,10 +27,11 @@ list = []
 fieldnames = ["name","24hr volume", "market cap", "volume/mktcap"]
 count = 0
 
-with open('pleaseWork2.csv', 'w', newline='') as f:
+with open('coinInfo.csv', 'w', newline='') as f:
     writer = csv.writer(f)
     writer.writerow(fieldnames)
-    for i in coinIDs[7159:]:
+    # for i in coinIDs[7159:] if api gets throttled at anypoint
+    for i in coinIDs:
         marketData = requests.get(url1 + i + url2)
         marketCap = marketData.json()['market_caps'][0][1]
         volume = marketData.json()['total_volumes'][0][1]
